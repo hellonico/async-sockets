@@ -9,7 +9,8 @@ A Clojure library for opening and working with sockets asynchronously.
 [Leiningen](http://leiningen.org) dependency information:
 
 ```
-[com.gearswithingears/async-sockets "0.1.0"]
+; [com.gearswithingears/async-sockets "0.1.0"]
+[com.hellonico.gearswithingears/async-sockets "0.1.0"]
 ```
 
 ## Usage
