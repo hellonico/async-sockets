@@ -34,9 +34,9 @@ To connect and send a message to a remote server `example.com`:
 
 ```clojure
 (ns user
-  (:require [async-sockets.core :refer :all]
+  (:require [com.gearswithingears.async-sockets :refer :all]
             [clojure.core.async :as async]))
-
+            
 (let [socket (socket-client "example.com" 12345)]
   (async/>!! (:out socket) "Hello, World")
   (close-socket-client socket))
@@ -46,9 +46,9 @@ To start an asynchronous socket server, which in this case echoes every input re
 
 ```clojure
 (ns user
-  (:require [async-sockets.core :refer :all]
+  (:require [com.gearswithingears.async-sockets :refer :all]
             [clojure.core.async :as async]))
-   
+
 (defn echo-everything [socket]
   (async/go-loop []
     (when-let [line (async/<! (:in socket))]
